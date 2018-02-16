@@ -49,12 +49,17 @@
 
   \begin{solution}
     % Write your solution here
+    For the domain in \textbf{Partial} we will have the positive integers because negative integers would give imaginary numbers. The codomain will have all real numbers. The Set of values will be all real numbers(positive).
+    
+    For the domain in \textbf{Total} we will have all square of integers. The codomain will be the same as Partial which will be all real numbers. The set of values will also be all positive real numbers.
+
   \end{solution}
   
   \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
     % Write your solution here
+    The first ith position of '1' in S, should be the value in f(S). In '01' f(S) would be '2'. For ith position of an empty string in S, f(S) would be 0.But for S='0' or S='00' or S='000', f(S) won't have a value. Hence, as S doesn't have a value for S='0', f is not a function.
   \end{solution}
 
   \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
@@ -66,6 +71,14 @@
 
   \begin{solution}
     % Write your solution here
+    \textbf{1.$X$ and $Y$ have been in class together} \newline
+    For equivalence we test the reflexive, symmetric and transitive property. If X is in class so X will also be in class and so will be Y:if Y is in class  then Y will be also in class confirming the reflexive property. For symmetric if X is in class with Y then Y will also be in class of x confirming the symmetric property. For transitive, if X is in class of Y AND Y is in same class with Z, it doesn't mean that X will be in the same class with Z,hence failing the transitive property and thus not defining the equivalence relation on S. \newline
+    
+    \textbf{2.$X$ and $Y$ rhyme}\newline
+    If X rhymes then so will X. If Y rhymes then Y will also rhyme. Proving the reflexive property. If X rhymes with Y so Y will also rhyme with X, confirming the symmetric property. If X rhymes with Y and Y rhymes with Z, then X will also rhyme with Z, proving the transitive property and hence it defines an equivalence on S. \newline
+    
+    \textbf{3.$X$ is a subset of $Y$}\newline
+    If X is a subset then X will also be a subset and Y is a subset then Y will also be a subset proving reflexive property.If X is a subset of Y then its not necessary for Y to be a subset of X, hence failing the symmetric property, and thus it doesn't define an equivalence on S. 
   \end{solution}
 
 \end{parts}
@@ -74,6 +87,15 @@
 \question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
     % Write your solution here
+    For proving $f(A) \subseteq B$, we basically consider $A=f^{-1}(B)$, which means $f(A)=B$. \newline
+    When we take a function in $A = f^{-1}(B)$ , the expression becomes $f(A) = f(f^{-1}(B))$ . Which eventually becomes \newline
+    \begin{center}
+    $f(A)=B$    
+    \end{center}
+    For proving $f(A) \subseteq B$ , we need to have elements in $f(A)$ that map to B. So $f(A)=B$ implies that an element in $f(A)$ is also in B, hence proving that $f(A)$ is a subset of set B, as there will be elements in $f(A)$ that will be in B.\newline
+    A={a1,a2,..,an}\newline
+    B={b1,b2,..bn} \newline
+    As $f(A)=B$, therefore f(a1)=b1,f(a2)=b2,f(an)=bn. As f(an) $\in$ B, thus $f(A) \subseteq B.$
   \end{solution}
 
 \question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
@@ -89,6 +111,13 @@
 
   \begin{solution}
     % Write your solution here
+    We have to prove that there is a bijection from A to B. For that we have to establish surjection and injection. For injection we consider two subsets C and C1. $f(C)$ = $f(C1)$
+    We come up with: 
+    \begin{center}
+        C - {n} = f(C)=f(C1)
+        C U {n} = f(C) = f(C1)
+    \end{center}
+    Thus it is injective. For surjection, let A be an element of range of f( which means it is a subset of odd size). If A has n, then by subtracting n from A , we get a set which is a subset of even number of elements in it. But if A doesn't have n then B U {n} produces a set which is a subset of even size. Thus every element will have something to map with some element, hence proving the surjectivity of $f$.  
   \end{solution}
   
 \question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
@@ -122,10 +151,29 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
     \part[15] Derive a closed-form for $M_n$ in terms of $n$.
   \begin{solution}
     % Write your solution here
+    For the dots in Stem height = 2(n-1) \newline
+    The dots in Cap width = n+1 \newline
+    
+    But for the dots in Cap Height : $|\dfrac{n}{2}|+1-\dfrac{|\dfrac{n}{2}|(|\dfrac{n}{2}|+1)}{2}$
+
+    \newline
+    So for the $M_n$ in terms of n we will have : \newline
+    $M_n = (n+1)(|\dfrac{n}{2}|+1-\dfrac{|\dfrac{n}{2}|(|\dfrac{n}{2}|+1)}{2})+2(n-1)$
+    
+    \newline
   \end{solution}
     \part[5] What is the total height of the $20$th mushroom in the series? 
   \begin{solution}
     % Write your solution here
+    For the total height (H) of the 20th mushroom in the series : \newline
+    Stem Height = 19 \newline
+    But Cap height = 11 \newline
+    For H we will add the both heights for the total Height of the 20th mushroom which is : \newline
+    H = 19+11 \newline
+    H=30
+    
+    
+    
   \end{solution}
 \end{parts}
 
@@ -154,11 +202,17 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
  
     \begin{solution}
     % Write your solution here
+    To generate a n in the fibonacci number, we will consider that we can generate a fibonacci number for each n.\newline
+    The fibonacci series converges as the golden ratio tells us. \newline
+    Thus for the nth term there will be a bijection i.e every domain in the nth value can be mapped to a image using the formula. And it can be done the other way round. \newline
+    Hence as the domain is mapped to a codomain and the codomain can be mapped to a domain, we can conclude it is bijective.
   \end{solution}
   \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Modified Wythoff Array is countable. 
 
   \begin{solution}
     % Write your solution here
+     We can conclude that as we are provided with a set which is modified. and only a few changes have been made, we will take the union of this set with the derived part of the previous set. \newline
+     It will result in a set that will be countable and hence, unique.
   \end{solution}
 \end{parts}
 
